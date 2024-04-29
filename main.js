@@ -35,7 +35,7 @@ while (dadoTipo != "pari" && dadoTipo != "dispari"){
 
 //Unic bloccone
 dadoUtente = document.getElementById("dadi");
-object.addEventListener("click");
+dadoUtente.addEventListener("click");
 let dadoUser = prompt("Inserisci il numero del tuo dado");
 while (dadoUser < 1 && dadoUser > 5) {
     // while(dadoUser<0 && dadoUser>5){
