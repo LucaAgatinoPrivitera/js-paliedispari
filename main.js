@@ -19,7 +19,7 @@ function palindromo(parolaUtente) {
     }
 }
 
-palindromo(parolaUtente);
+palindromo(parolaUtente); //Funziona e non, mi da sempre palindromo
 */
 
 
