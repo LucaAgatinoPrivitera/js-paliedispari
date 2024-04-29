@@ -13,3 +13,9 @@ Dichiariamo chi ha vinto.
 
 :regalo: BONUS
 Invece di usare prompt e alert, provate a interagire con la pagina.
+
+
+Devo chiedere:
+    perché la palindroma non mi funziona bene.
+    Se la parola è pari o dispari va tutto bene, altrimenti mi entra in un loop infinito
+    Come convertire in funzione riga 40 e 48
