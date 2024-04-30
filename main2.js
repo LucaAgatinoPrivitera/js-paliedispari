@@ -39,25 +39,23 @@ while (dadoTipo != "pari" && dadoTipo != "dispari") {
 let dadoCPU = 0;
 dadoUtente = document.getElementById("dadi");
 let dadoUser = 0;
-document.getElementById("dadi").addEventListener("click", function () {
-    dadoUser = prompt("Inserisci il numero del tuo dado");
-    while (dadoUser < 1 /*&& dadoUser > 5*/) { //problema non funziona
-        // while(dadoUser<0 && dadoUser>5){
-        dadoUser = prompt("Inserisci il numero del tuo dado tra 1 e 5");
-    }
-}
-)
 
 document.getElementById("dadi").addEventListener("click", function dadibot() {
-
-    while (dadoUser < 1 && dadoUser > 5) { //problema non funziona
+    console.log("Luca è stato qui", dadoUser)
+    while (dadoUser < 1 || dadoUser > 5 || isNaN(dadoUser)) { //problema ora funziona, non dovevo usare && ma ||
         // while(dadoUser<0 && dadoUser>5){
         dadoUser = prompt("Inserisci il numero del tuo dado tra 1 e 5");
+        console.log(dadoUser)
     }
 
     dadoCPU = Math.floor(Math.random() * 6);
     dadoUtente.innerHTML = (`Il tuo dado è: ` + `${dadoUser}` + `, mentre quello del PC è: ` + `${dadoCPU}`)
     let dadoRisultato = dadoUser + dadoCPU;
+
+
+
+
+
     if (dadoRisultato % 2 == 0) {
         let dadoRisultatoFinale = "pari";
     }
