@@ -28,14 +28,14 @@ palindromo(parolaUtente); //Funziona e non, mi da sempre palindromo
 
 //Qui problema del loop
 //Dadi
-/*
-let dadoTipo= prompt("Pari o dispari?");
+
+let dadoTipo = prompt("Pari o dispari?");
 
 
-while (dadoTipo != "pari" && dadoTipo != "dispari"){
-    let dadoTipo= prompt("Pari o dispari?46y54ytyjht");
+while (dadoTipo != "pari" && dadoTipo != "dispari") {
+    dadoTipo = prompt("Pari o dispari?");
 }
-*/
+
 let dadoCPU = 0;
 dadoUtente = document.getElementById("dadi");
 let dadoUser = 0;
@@ -57,12 +57,26 @@ document.getElementById("dadi").addEventListener("click", function dadibot() {
 
     dadoCPU = Math.floor(Math.random() * 6);
     dadoUtente.innerHTML = (`Il tuo dado è: ` + `${dadoUser}` + `, mentre quello del PC è: ` + `${dadoCPU}`)
+    let dadoRisultato = dadoUser + dadoCPU;
+    let dadoRisultatoFinale = dadoRisultato % 2;
 
-    if (dadoUser > dadoCPU) {
-        dadoUtente.innerHTML += (`<br /> Hai vinto`);
+
+    if (dadoTipo == "pari"){
+        if (dadoTipo == "pari" && dadoRisultatoFinale==0) {
+            dadoUtente.innerHTML += (`<br /> Hai vinto`);
+        }
+        else {
+            dadoUtente.innerHTML += (`<br /> Hai perso`);
+        }
     }
-    else {
-        dadoUtente.innerHTML += (`<br /> Hai perso`);
+    else if (dadoTipo == "dispari"){
+        if (dadoTipo == "dispari" && dadoRisultatoFinale!=0) {
+            dadoUtente.innerHTML += (`<br /> Hai vinto`);
+        }
+        else {
+            dadoUtente.innerHTML += (`<br /> Hai perso`);
+        }
     }
+
 }
 )

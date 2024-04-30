@@ -45,7 +45,10 @@ while (dadoUser < 1 && dadoUser > 5) {
 
 
 //Questi tre sono collegati, da sistemare però
-object = document.getElementById("dadi");
-object.addEventListener("click");
-let dadoCPU = Math.floor(Math.random() * 6);
+let dadoCPU = 0;
+dadoUtente = document.getElementById("dadi");
+document.getElementById("dadi").addEventListener("click", function dadibot() {
+    dadoCPU = Math.floor(Math.random() * 6);
+    return dadoCPU;
+});
 
