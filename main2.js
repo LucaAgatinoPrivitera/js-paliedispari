@@ -58,25 +58,37 @@ document.getElementById("dadi").addEventListener("click", function dadibot() {
     dadoCPU = Math.floor(Math.random() * 6);
     dadoUtente.innerHTML = (`Il tuo dado è: ` + `${dadoUser}` + `, mentre quello del PC è: ` + `${dadoCPU}`)
     let dadoRisultato = dadoUser + dadoCPU;
-    let dadoRisultatoFinale = dadoRisultato % 2;
-
-
-    if (dadoTipo == "pari"){
-        if (dadoTipo == "pari" && dadoRisultatoFinale==0) {
-            dadoUtente.innerHTML += (`<br /> Hai vinto`);
-        }
-        else {
-            dadoUtente.innerHTML += (`<br /> Hai perso`);
-        }
+    if (dadoRisultato % 2 == 0) {
+        let dadoRisultatoFinale = "pari";
     }
-    else if (dadoTipo == "dispari"){
-        if (dadoTipo == "dispari" && dadoRisultatoFinale!=0) {
-            dadoUtente.innerHTML += (`<br /> Hai vinto`);
-        }
-        else {
-            dadoUtente.innerHTML += (`<br /> Hai perso`);
-        }
+    else {
+        let dadoRisultatoFinale = "dispari";
     }
+    return dadoRisultato;
 
+
+    if (dadoTipo == dadoRisultatoFinale) {
+        dadoUtente.innerHTML += (`<br /> Hai vinto`);
+    }
+    else {
+        dadoUtente.innerHTML += (`<br /> Hai perso`);
+    }
 }
+
+
 )
+
+
+if (dadoRisultato % 2 == 0) {
+    let dadoRisultatoFinale = "pari";
+}
+else {
+    let dadoRisultatoFinale = "dispari";
+}
+
+if (dadoTipo == dadoRisultatoFinale) {
+    dadoUtente.innerHTML += (`<br /> Hai vinto`);
+}
+else {
+    dadoUtente.innerHTML += (`<br /> Hai perso`);
+}
